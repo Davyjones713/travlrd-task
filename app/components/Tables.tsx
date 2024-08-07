@@ -1,4 +1,4 @@
-import { fetchSupabaseData } from "@/lib/fetchSupabaseData";
+import { FC } from "react";
 import Table from "./Table";
 
 interface ItemType {
@@ -8,9 +8,11 @@ interface ItemType {
   description: string;
 }
 
-const Tables = async () => {
-  const data: ItemType[] = await fetchSupabaseData();
+interface TablesProps {
+  data: ItemType[];
+}
 
+const Tables: FC<TablesProps> = ({ data }) => {
   return (
     <div
       style={{
