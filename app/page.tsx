@@ -1,16 +1,12 @@
 import { Fragment } from "react";
 import Tables from "./components/Tables";
-import { fetchSupabaseData } from "@/lib/fetchSupabaseData";
 
-export const metadata = {
-  revalidate: 30,
-};
-export default async function asyncHome() {
-  const data = await fetchSupabaseData();
+export const revalidate = 30;
 
+export default function asyncHome() {
   return (
     <Fragment>
-      <Tables data={data} />
+      <Tables />
     </Fragment>
   );
 }
