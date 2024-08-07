@@ -1,9 +1,7 @@
 import { Fragment } from "react";
 import Tables from "./components/Tables";
 
-export const revalidate = 1;
-
-export default function Home() {
+export default function asyncHome() {
   return (
     <Fragment>
       <Tables />
