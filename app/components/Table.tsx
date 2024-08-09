@@ -18,7 +18,7 @@ const Table: React.FC<TableProps> = ({ item }) => {
       <CardBody className="overflow-visible py-2">
         <Image
           alt="Card background"
-          className="object-cover rounded-xl min-h-[150px]"
+          className="object-cover rounded-xl h-[150px] max-h-[150px]"
           src={item.image}
           width={270}
         />
